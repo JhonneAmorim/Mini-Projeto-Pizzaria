@@ -8,6 +8,105 @@
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  
+  <div class="wrapper">
+    <nav class="menu">
+      <button aria-expanded="false" aria-controls="menu-list">
+        <span class="open">☰</span>
+        <span class="close">×</span>
+        Menu
+      </button>
+      <ul>
+        <li>
+          <a href="">Tacos</a>
+        </li>
+        <li>
+          <a href="">Bebidas</a>
+        </li>
+        <li>
+          <a href="">Vinhos</a>
+        </li>
+        <li>
+          <a href="">Sobremesas</a>
+        </li>
+        <li>
+          <a href="">Reservas</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="top">
+      <header class="hero">
+        <h1>Jhonne's Taco Joint</h1>
+        <p>Tacos muitos bons!</p>
+      </header>
+      <div class="cta cta1">
+        <p class="price">R$1.99</p>
+        <p>Tacos</p>
+      </div>
+      <div class="cta cta2">
+        <p class="price">R$3.99</p>
+        <p>Coffee</p>
+      </div>
+
+    </div>
+
+    <section class="features">
+      <div class="feature">
+        <span class="icon"></span>
+        <h3>Tacos</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🍺</span>
+        <h3>Bebida</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🍷</span>
+        <h3>Vinho</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🎵</span>
+        <h3>Musica</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+    </section>
+
+    <section class="about">
+      <img src="https://vivareceita-cdn.s3.amazonaws.com/uploads/2022/02/Aprenda-como-fazer-tacos-mexicanos-em-casa.-Fonte-My-Quiet-Kitchen.jpg" alt="Yummy Taco" class="about__mockup">
+      <div class="about__mockup">
+        <h2>Taco em destaque</h2>
+        <p>Slim Profile, easy to hold and loaded with cheese.</p>
+        <p>This is the one you have been waiting for</p>
+        <button>Ler mais →</button>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>Instant Grams</h2>
+      <img src="https://pat.feldman.com.br/wp-content/uploads/2012/01/comida-caseira.jpg" alt="">
+      <img src="https://i2.wp.com/files.agro20.com.br/uploads/2020/03/comidabrasileira3.jpg?fit=1024%2C585&ssl=1" alt="">
+      <img src="https://pat.feldman.com.br/wp-content/uploads/2012/01/comida-caseira.jpg" alt="">
+      <img src="https://s2.glbimg.com/MJa6T81QCCvKZEjv7DRJqCtNrMA=/620x455/e.glbimg.com/og/ed/f/original/2021/07/30/comida-delivery-brasil-pesquisa-refice-tempero-nordestino-moda-roma-99food-datafolha-cozinheiras-brasileiras.jpg" alt="">
+      <img src="https://media.istockphoto.com/photos/brazilian-lunch-dish-isolated-on-wooden-background-picture-id1243431148?k=20&m=1243431148&s=612x612&w=0&h=aF_ZK4d00c3cfY_NSVIod_sDxGiYqL1OrIrJvRpJo04=" alt="">
+      <img src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-brasil247/swp/jtjeq9/media/20190703150712_3a5cce71-4170-463c-a9ca-ce55953a8533.jpeg" alt="">
+      <img src="https://static.clubedaanamariabraga.com.br/wp-content/uploads/2019/04/comida-arabe-1024x576.jpg" alt="">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFcS500q-ah7LPQJmlyBXs2oJgdPekGAvCmQ&usqp=CAU" alt="">
+      <img src="https://www.passagenspromo.com.br/blog/wp-content/uploads/2021/12/Comida-tipica-de-Portugal-740x415.jpg" alt="">
+    </section>
+    
+  </div>
+
+  <script>
+    const navButton = document.querySelector('button[aria-expanded]')
+
+    function toggleNav({ target })  {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false
+      navButton.setAttribute('aria-expanded', !expanded)
+    }
+
+    navButton.addEventListener('click', toggleNav)  
+  </script>
 </body>
 </html>
